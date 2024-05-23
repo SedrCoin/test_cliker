@@ -13,7 +13,7 @@ let counter = localStorage.getItem('counter') || 0;
 score.innerHTML = counter
 
 
-btn.addEventListener('click', (event) => {
+btn.addEventListener('touchstart', (event) => {
 
     event.preventDefault();
 
