@@ -23,7 +23,7 @@ btn.addEventListener('touchstart', (event) => {
     event.preventDefault();
 
      if ("vibrate" in navigator) {
-        navigator.vibrate(100); // Вибрация на 200 миллисекунд
+        window.navigator.vibrate(200); // Вибрация на 200 миллисекунд
     } else {
         console.log("Ваше устройство не поддерживает функцию вибрации.");
     }
