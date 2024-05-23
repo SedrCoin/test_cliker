@@ -1,5 +1,8 @@
 Telegram.WebApp.ready();
-Telegram.WebApp.expand();
+const tele = window.Telegram.WebApp; 
+
+tele.expand()
+
 
 const btn = document.querySelector('.button_clicker')
 let score = document.querySelector('.score')
