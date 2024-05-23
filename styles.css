@@ -1,0 +1,22 @@
+.button_clicker {
+
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+}
+
+.main {
+    display: grid;
+    place-items: center;
+}
+
+p{
+    font-size: 40px;
+    color: white;
+}
+
+
+
+body {
+    background-image: linear-gradient(to right bottom, #051937, #19263f, #2b3447, #3c424e, #4d5056);
+}
