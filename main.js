@@ -15,7 +15,7 @@ let counter = localStorage.getItem('counter') || 0;
 
 score.innerHTML = counter
 
-userName.innerHTML = window.Telegram.WebApp.initDataUnsafe
+userName.innerHTML = window.Telegram.WebApp.initDataUnsafe.user.first_name
 
 
 btn.addEventListener('touchstart', (event) => {
