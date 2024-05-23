@@ -19,6 +19,13 @@
     background-position: center;
 }
 
+
+button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+  }
+
+
 .main {
     display: grid;
     place-items: center;
