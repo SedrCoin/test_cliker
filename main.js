@@ -7,8 +7,9 @@ let counter = localStorage.getItem('counter') || 0;
 score.innerHTML = counter
 
 
-btn.addEventListener('click', () => {
+btn.addEventListener('click', (event) => {
 
+    event.preventDefault();
     counter++
 
     score.innerHTML = counter
