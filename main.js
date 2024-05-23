@@ -16,7 +16,13 @@ score.innerHTML = counter
 btn.addEventListener('click', (event) => {
 
     event.preventDefault();
-    navigator.vibrate(200); 
+
+ if (navigator.vibrate) {
+        navigator.vibrate(200); 
+    } else {
+        console.log('');
+    }
+    
     counter++
 
     score.innerHTML = counter
