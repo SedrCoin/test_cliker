@@ -13,6 +13,10 @@
     margin: 0 auto;
     outline: none;
     border: none;
+
+    background-image: url(ya.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .main {
