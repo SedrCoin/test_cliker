@@ -1,7 +1,9 @@
-Telegram.WebApp.ready();
+
 const tele = window.Telegram.WebApp; 
 
+tele.ready()
 tele.expand()
+
 
 
 const btn = document.querySelector('.button_clicker')
@@ -17,11 +19,12 @@ btn.addEventListener('touchstart', (event) => {
 
     event.preventDefault();
 
- if (navigator.vibrate) {
-        navigator.vibrate(200); 
+     if ("vibrate" in navigator) {
+        navigator.vibrate(100); // Вибрация на 200 миллисекунд
     } else {
-        console.log('');
+        console.log("Ваше устройство не поддерживает функцию вибрации.");
     }
+
     
     counter++
 
