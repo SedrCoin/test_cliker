@@ -1,8 +1,18 @@
 .button_clicker {
 
+    width: 70vw;
+    height: 70vw;
+    max-width: 500px;
+    max-height: 500px;
     border-radius: 50%;
-    width: 500px;
-    height: 500px;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 70vw;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    border: none;
 }
 
 .main {
@@ -11,12 +21,13 @@
 }
 
 p{
-    font-size: 40px;
+    font-size: 3em;
     color: white;
 }
 
 
 
-body {
+html {
+    height: 100%;
     background-image: linear-gradient(to right bottom, #051937, #19263f, #2b3447, #3c424e, #4d5056);
 }
