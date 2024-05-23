@@ -8,11 +8,14 @@ tele.expand()
 
 const btn = document.querySelector('.button_clicker')
 let score = document.querySelector('.score')
+let userName = document.querySelector('.name');
 
 let counter = localStorage.getItem('counter') || 0;
 
 
 score.innerHTML = counter
+
+userName.innerHTML = window.Telegram.WebApp.initData
 
 
 btn.addEventListener('touchstart', (event) => {
