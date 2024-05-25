@@ -1,7 +1,8 @@
+Telegram.WebApp.ready();
+
 
 const tele = window.Telegram.WebApp; 
 
-tele.ready()
 tele.expand()
 
 
@@ -13,30 +14,58 @@ let userName = document.querySelector('.name');
 let counter = localStorage.getItem('counter') || 0;
 
 
+
+
 score.innerHTML = counter
 
-userName.innerHTML = window.Telegram.WebApp.initDataUnsafe.user.first_name +  window.Telegram.WebApp.initDataUnsafe.user.last_name
 
 
-btn.addEventListener('touchstart', (event) => {
+
+btn.addEventListener('click', (event) => {
 
     event.preventDefault();
 
-     if ("vibrate" in navigator) {
-        window.navigator.vibrate(200); // Вибрация на 200 миллисекунд
-    } else {
-        console.log("Ваше устройство не поддерживает функцию вибрации.");
-    }
-
-    
     counter++
 
     score.innerHTML = counter
 
-    // Сохраняем значение counter в localStorage
+
     localStorage.setItem('counter', counter);
 
+    const numberElement = document.createElement('div');
+    numberElement.classList.add('number-animation');
+    numberElement.innerText = "+1";
+
+    // Получаем координаты клика внутри кнопки
+    const button = event.currentTarget;
+    const rect = button.getBoundingClientRect();
+    const offsetX = event.clientX - rect.left;
+    const offsetY = event.clientY - rect.top;
+    
+    // Добавляем случайное смещение
+    const randomOffsetX = (Math.random() - 0.5) * 20; // Смещение по X в диапазоне [-10, 10] пикселей
+    const randomOffsetY = (Math.random() - 0.5) * 20; // Смещение по Y в диапазоне [-10, 10] пикселей
+
+    numberElement.style.left = (offsetX + randomOffsetX) + "px";
+    numberElement.style.top = (offsetY + randomOffsetY) + "px";
+
+    // Добавляем элемент в кнопку
+    button.appendChild(numberElement);
+
+    // Удаляем элемент после завершения анимации
+    setTimeout(() => {
+        numberElement.remove();
+    }, 1500);  // Убедитесь, что время тайм-аута совпадает с длительностью анимации
+
 })
+
+
+
+
+
+
+
+
 
 
 
